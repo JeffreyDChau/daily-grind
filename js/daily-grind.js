@@ -10,17 +10,32 @@ Color for coffee - color
 
 
 let myDate = new Date();
-let myDay = myDate.getDay();
+let myDay = "";
 let today = "";
 let coffee = "";
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+
+if(urlParams.has('day')){ //use query string
+    myDay= urlParams.get('day');
+    myDay= parseInt(myDay);
+}else{//use date object
+    myDay = myDate.getDay();
+}
 
 function coffeeTemplate(coffee){
     let myReturn = "";
 
 
-    myReturn=`<img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee" />
-    <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">Pumpkin Spice Latte</strong>,
-    ${coffee.desc}`
+    myReturn=`
+    <p>
+    <img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee" />
+    <strong id= "coffee-highlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">Pumpkin Spice Latte</strong>,
+    ${coffee.desc}
+    </p>
+    `
+ 
     return myReturn;
 
 }
@@ -63,7 +78,10 @@ switch(myDay){
 
 console.log(coffee);
 
-document.getElementById("coffee-output").innerhtml = coffeeTemplate();
+document.getElementById("coffee-output").innerhtml = coffeeTemplate(coffee);
 
+documentFragment.getElementById("HTML")[0].style.backgroundColor = coffee.color;
+
+document.getElementById("coffee-highlight").style.color = coffee.color;
 
 //alert("Hi, it's " + today);
