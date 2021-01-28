@@ -41,7 +41,17 @@ function coffeeTemplate(coffee){
 }
 
 switch(myDay){
-
+    case 0:
+        today = "Sunday";
+        coffee = {
+            color: "red",
+            name: "Cold Brew",
+            pic: "images/cold-brew.jpg",
+            alt: "A pic of cold brew",
+            day:"Sunday",
+            desc: `Pop open a cold brew`
+        };
+    break;
   
     case 1:
             today = "Monday";
@@ -75,6 +85,36 @@ switch(myDay){
                 desc: `Some days you just need the drip!`
             };
         break;
+    case 4:
+        today = "Thursday";
+        coffee = {
+            color: "green",
+            name: "Frappaccino",
+            pic: "images/frappaccino.jpg",
+            alt: "A pic of frappaccino",
+            desc: `Fancy frappaccino lovers day!`
+        };
+    break;
+    case 5:
+        today = "Friday";
+        coffee = {
+            color: "blue",
+            name: "Mocha",
+            pic: "images/mocha.jpg",
+            alt: "A pic of mocha",
+            desc: `Thank god it's mocha day!`
+        };
+    break;
+    case 6:
+        today = "Saturday";
+        coffee = {
+            color: "orange",
+            name: "Pumpkin-spice-latte",
+            pic: "images/pumpkin-spice-latte.jpg",
+            alt: "A pic of pumpkin-spice-latte",
+            desc: `Spice up your weekend with pumpkin-spice-latte!`
+        };
+    break;
         
 }
 
@@ -86,4 +126,4 @@ documentFragment.getElementById("HTML")[0].style.backgroundColor = coffee.color;
 
 document.getElementById("coffee-highlight").style.color = coffee.color;
 
-//alert("Hi, it's " + today);
+alert("Hi, it's " + today);
