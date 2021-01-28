@@ -120,7 +120,7 @@ switch(myDay){
 
 console.log(coffee);
 
-document.getElementById("coffee-output").innerhtml = coffeeTemplate(coffee);
+document.getElementById("coffee-output").innerhtml = coffeeTemplate(coffee.desc);
 
 document.getElementsByTagName("HTML")[0].style.backgroundColor = coffee.color;
 
