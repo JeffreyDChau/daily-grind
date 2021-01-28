@@ -19,12 +19,11 @@ const urlParams = new URLSearchParams(queryString);
 
 if(urlParams.has('day')){ //use query string
     myDay= urlParams.get('day');
-    //myDay= parseInt(myDay);
+    myDay= parseInt(myDay);
 }else{//use date object
     myDay = myDate.getDay();
 }
 
-myDay= parseInt(myDay);
 
 function coffeeTemplate(coffee){
     let myReturn = "";
@@ -123,7 +122,7 @@ console.log(coffee);
 
 document.getElementById("coffee-output").innerhtml = coffeeTemplate(coffee);
 
-documentFragment.getElementById("HTML")[0].style.backgroundColor = coffee.color;
+document.getElementsByTagName("HTML")[0].style.backgroundColor = coffee.color;
 
 document.getElementById("coffee-highlight").style.color = coffee.color;
 
