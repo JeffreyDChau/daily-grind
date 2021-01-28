@@ -10,7 +10,7 @@ Color for coffee - color
 
 
 let myDate = new Date();
-let myDay = myDate.getDay();
+let myDay = "";
 let today = "";
 let coffee = "";
 const queryString = window.location.search;
