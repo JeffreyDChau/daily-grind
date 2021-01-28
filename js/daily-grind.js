@@ -31,7 +31,7 @@ function coffeeTemplate(coffee){
     myReturn=`
     <p>
     <img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee" />
-    <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>,
+    <strong id="coffee-highlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>,
     ${coffee.desc}
     </p>
     `;
