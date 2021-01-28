@@ -15,30 +15,32 @@ let today = "";
 let coffee = "";
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-
-
-if(urlParams.has('day')){ //use query string
-    myDay= urlParams.get('day');
-    myDay= parseInt(myDay);
-}else{//use date object
+ 
+ 
+if(urlParams.has('day')){
+    myDay = urlParams.get('day');
+    myDay = parseInt(myDay);
+ 
+}else{
     myDay = myDate.getDay();
+ 
 }
-
-
+ 
+ 
 function coffeeTemplate(coffee){
     let myReturn = "";
-
-
-    myReturn =`
-    <p>
-    <img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee" />
-    <strong id="coffee-highlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>,
-    ${coffee.desc}
-    </p>`;
  
+    myReturn = `
+    <p>
+    <img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee">
+    <strong id="coffee-higlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily special is <strong>${coffee.name}</strong>, ${coffee.desc}
+ 
+    </p>
+        `;
+        
     return myReturn;
-
 }
+
 
 switch(myDay){
     case 0:
@@ -117,15 +119,13 @@ switch(myDay){
     break;
         
 }
-
 console.log(coffee);
-
-document.getElementById("coffee-output").innerhtml = coffeeTemplate(coffee.desc);
-
+ 
+document.getElementById("coffee-output").innerHTML = coffeeTemplate(coffee);
+ 
 document.getElementsByTagName("HTML")[0].style.backgroundColor = coffee.color;
-
+ 
 document.getElementById("coffee-highlight").style.color = coffee.color;
 
-document.getElementById("coffee").src=coffee.pic;
 
 alert("Hi, it's " + today);
