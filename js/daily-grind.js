@@ -31,10 +31,10 @@ function coffeeTemplate(coffee){
     myReturn=`
     <p>
     <img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee" />
-    <strong id= "coffee-highlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">Pumpkin Spice Latte</strong>,
+    <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>,
     ${coffee.desc}
     </p>
-    `
+    `;
  
     return myReturn;
 
@@ -80,10 +80,10 @@ switch(myDay){
 
 console.log(coffee);
 
-document.getElementById('coffee-output').innerhtml = coffeeTemplate(coffee);
+document.getElementById("coffee-output").innerhtml = coffeeTemplate(coffee);
 
-documentFragment.getElementById('HTML')[0].style.backgroundColor = coffee.color;
+documentFragment.getElementById("HTML")[0].style.backgroundColor = coffee.color;
 
-document.getElementById('coffee-highlight').style.color = coffee.color;
+document.getElementById("coffee-highlight").style.color = coffee.color;
 
 //alert("Hi, it's " + today);
