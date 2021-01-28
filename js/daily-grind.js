@@ -33,14 +33,14 @@ function coffeeTemplate(coffee){
     myReturn = `
     <p>
     <img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee">
-    <strong id="coffee-higlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily special is <strong>${coffee.name}</strong>, ${coffee.desc}
+    <strong id="coffee-highlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily special is <strong>${coffee.name}</strong>, ${coffee.desc}
  
     </p>
         `;
         
     return myReturn;
 }
-
+//fri thurs tues monday
 
 switch(myDay){
     case 0:
