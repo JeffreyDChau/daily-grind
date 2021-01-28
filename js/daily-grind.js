@@ -122,8 +122,10 @@ console.log(coffee);
 
 document.getElementById("coffee-output").innerhtml = coffeeTemplate(coffee);
 
-//documentFragment.getElementById("HTML")[0].style.backgroundColor = coffee.color;
+documentFragment.getElementById("HTML")[0].style.backgroundColor = coffee.color;
 
-//document.getElementById("coffee-highlight").style.color = coffee.color;
+document.getElementById("coffee-highlight").style.color = coffee.color;
+
+document.getElementById('coffee').src=pic;
 
 alert("Hi, it's " + today);
