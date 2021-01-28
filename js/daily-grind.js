@@ -126,6 +126,6 @@ documentFragment.getElementById("HTML")[0].style.backgroundColor = coffee.color;
 
 document.getElementById("coffee-highlight").style.color = coffee.color;
 
-document.getElementById('coffee').src=pic;
+document.getElementById("coffee").src=coffee.pic;
 
 alert("Hi, it's " + today);
