@@ -29,7 +29,7 @@ function coffeeTemplate(coffee){
     let myReturn = "";
 
 
-    myReturn+=`
+    myReturn =`
     <p>
     <img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee" />
     <strong id="coffee-highlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>,
