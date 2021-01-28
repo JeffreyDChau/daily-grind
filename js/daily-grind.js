@@ -84,6 +84,7 @@ switch(myDay){
                 name: "Drip",
                 pic: "images/drip.jpg",
                 alt: "A pic of drip Coffee",
+                day:"Wenesday",
                 desc: `Some days you just need the drip!`
             };
         break;
@@ -94,6 +95,7 @@ switch(myDay){
             name: "Frappaccino",
             pic: "images/frappaccino.jpg",
             alt: "A pic of frappaccino",
+            day:"Thursday",
             desc: `Fancy frappaccino lovers day!`
         };
     break;
@@ -104,6 +106,7 @@ switch(myDay){
             name: "Mocha",
             pic: "images/mocha.jpg",
             alt: "A pic of mocha",
+            day:"Friday",
             desc: `Thank god it's mocha day!`
         };
     break;
@@ -114,6 +117,7 @@ switch(myDay){
             name: "Pumpkin-spice-latte",
             pic: "images/pumpkin-spice-latte.jpg",
             alt: "A pic of pumpkin-spice-latte",
+            day:"Saturday",
             desc: `Spice up your weekend with pumpkin-spice-latte!`
         };
     break;
