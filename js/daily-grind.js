@@ -10,9 +10,9 @@ Color for coffee - color
 
 
 let myDate = new Date();
-let myDay = '';
-let today = '';
-let coffee = '';
+let myDay = myDate.getDay();
+let today = "";
+let coffee = "";
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
