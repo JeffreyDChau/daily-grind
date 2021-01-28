@@ -10,9 +10,9 @@ Color for coffee - color
 
 
 let myDate = new Date();
-let myDay = "";
-let today = "";
-let coffee = "";
+let myDay = '';
+let today = '';
+let coffee = '';
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
@@ -46,11 +46,12 @@ switch(myDay){
     case 1:
             today = "Monday";
             coffee = {
-                color: "Pink",
+                color: "pink",
                 name: "Bubble Tea",
                 pic: "images/bubble-tea.jpg",
                 alt: "A pic of bubble tea",
-                desc: `Some days you just need the bubble tea!`
+                day:"Monday",
+                desc: `You just need the bubble tea!`
             };
         break;
     case 2:
@@ -60,6 +61,7 @@ switch(myDay){
                 name: "Caramel Latte",
                 pic: "images/caramel-latte.jpg",
                 alt: "A pic of caramel-latte",
+                day:"Tuesday",
                 desc: `Great scott!, it's Caramel latte day!`
             };
         break;
